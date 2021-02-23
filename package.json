@@ -1,0 +1,33 @@
+{
+  "name": "basic-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "passwords.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerstej9/basic-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerstej9/basic-auth/issues"
+  },
+  "homepage": "https://github.com/gerstej9/basic-auth#readme",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.17"
+  },
+  "devDependencies": {
+    "@code-fellows/supergoose": "^1.0.11",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3"
+  }
+}
