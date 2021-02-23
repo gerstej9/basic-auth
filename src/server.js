@@ -7,8 +7,8 @@ const express = require('express');
 
 const app = express();
 
-const signUp = require('/routes/signUp.js');
-const signIn = require('/routes/signin.js');
+const signUp = require('./routes/signup.js');
+const signIn = require('./routes/signin.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
