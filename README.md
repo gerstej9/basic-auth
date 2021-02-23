@@ -10,7 +10,7 @@ https://github.com/gerstej9/basic-auth/actions
 https://jamesgersten-basic-auth.herokuapp.com/
 
 ## UML
-![](./assets/UML_lab06.jpg)
+![](/assets/UML_lab06.jpg)
 
 ## Class notes
 * Learn how to encode and encrypt user information
