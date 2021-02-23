@@ -12,12 +12,10 @@ async function basicAuth(req, res, next){
     let [username, password] = decodedString.split(':');
   
   
-
-    let userFromDB = await UserModel.findOne({ username: username });
-    let isValid = await bcrypt.compare(password, userFromDB.password);
+    const validUser = await UserModel.authenticate(username, password);
   
-    if (isValid) {
-      req.params.userFromDB = userFromDB;
+    if (validUser) {
+      req.params.userFromDB = validUser;
       next();
     } else {
       next('Invalid User Sign In');
