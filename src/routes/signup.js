@@ -10,13 +10,13 @@ router.post('/signup', async (req, res) => {
   if(!req.body.username){res.status(500).send('Need username')}
   else if(!req.body.password){res.status(500).send('Need password')}
   else{
-  let username = req.body.username;
-  let password = req.body.password;
+    let password = req.body.password;
+    let username = req.body.username;
 
 
   let encryptedPassword = await bcrypt.hash(password, 5);
   const newUser = new UserModel({ username: username, password: encryptedPassword });
-  const document = await newUser.save();
+  const document = await newUser.save({ username: username, password: encryptedPassword });
 
   res.status(201).json(document);
   }

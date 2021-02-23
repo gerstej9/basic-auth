@@ -7,7 +7,6 @@ const UserModel = require('../middleware/schema.js');
 
 router.post('/signin', basicAuth, async (req, res, next) => {
 
-
   const userFromDB = req.params.userFromDB;
   res.status(200).json(userFromDB);
 });
